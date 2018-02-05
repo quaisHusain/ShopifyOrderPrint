@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 03, 2018 at 08:40 PM
+-- Generation Time: Feb 05, 2018 at 07:57 PM
 -- Server version: 5.7.21-0ubuntu0.17.10.1
 -- PHP Version: 7.1.11-0ubuntu0.17.10.1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rituraj`
+-- Database: `rituraj2`
 --
 
 -- --------------------------------------------------------
@@ -74,31 +74,6 @@ CREATE TABLE `shopify_stores` (
   `hmac` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_orders`
---
-
-CREATE TABLE `tbl_orders` (
-  `_id` int(11) NOT NULL,
-  `orderNumber` varchar(100) DEFAULT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `zipcode` varchar(100) DEFAULT NULL,
-  `total` varchar(100) DEFAULT NULL,
-  `tags` varchar(500) DEFAULT NULL,
-  `note` text,
-  `fulfillments` varchar(100) DEFAULT NULL,
-  `fraud` varchar(100) DEFAULT NULL,
-  `paid` varchar(100) DEFAULT NULL,
-  `card` varchar(100) DEFAULT NULL,
-  `tracking_number` varchar(100) DEFAULT NULL,
-  `orderid` varchar(100) DEFAULT NULL,
-  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `order_created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Indexes for dumped tables
 --
@@ -110,12 +85,6 @@ ALTER TABLE `shopify_stores`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_orders`
---
-ALTER TABLE `tbl_orders`
-  ADD PRIMARY KEY (`_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -123,12 +92,7 @@ ALTER TABLE `tbl_orders`
 -- AUTO_INCREMENT for table `shopify_stores`
 --
 ALTER TABLE `shopify_stores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_orders`
---
-ALTER TABLE `tbl_orders`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3037;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
