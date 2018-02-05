@@ -1,21 +1,6 @@
- <style type="text/css">
-   .dataTables_filter input {
-    width: 300px !important;
-}
-.ui-button--primary, .btn-primary, .domain-status__table-wrapper>div:first-child .ui-button {
-    background: -webkit-gradient(linear, left top, left bottom, from(#6371c7), to(#5563c1));
-    background: linear-gradient(to bottom, #6371c7, #5563c1);
-    border-color: #3f4eae;
-    -webkit-box-shadow: inset 0 1px 0 0 #6f7bcb;
-    box-shadow: inset 0 1px 0 0 #6f7bcb;
-    color: #ffffff;
-  }
-.modal-lg {
-    max-width: 1000px !important;
-}
- </style>
-
- <?php 
+<!-- Winter Breeze -->
+<!-- Common Base Styling -->
+<?php 
 $primary_font = "Verdana";
 $primary_font_color = "#000";
 $primary_font_size = "12px";
@@ -514,60 +499,9 @@ $theme_color = "#303336";
       }
     
     }
-    .modal {
-    max-height: 600px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    display: none;
-    overflow: scroll;
-    outline: 0;
-}
 </style>
- <article class="">
- <div class="col-md-12">   
- <h3>Orders List</h3> 
- <h5 id="msgs"></h5>               
-<table id="employee-grid" class="table table-striped table-bordered table-hover" >
-   <thead>
-    <tr>
-      <th><input type="checkbox" id="select-all-items" name="checkAll" class="singleCheck"></th>
-      <th>Order </th>
-      <th>Name </th>
-      <th>Zip Code </th>
-      <th>Total </th>
-      <th>Tags</th>
-      <th>Fulfillment</th>
-      <th>Fraud</th>
-      <th>Paid</th>
-     <!--<th>Card</th>-->
-      <th>Tracking Number</th>
-      <th>Print</th>
-      <th>Archive</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-    </tbody>
-  </table> 
-  </div>         
-                 
- </article>              
-<div>
-
-<input type="hidden" name="">
-
-
-</div>
-
-  <div class="modal" id="modal-media">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content" style="padding:30px !important">
-                         
-  <div class="printer-preview-content" contenteditable="true" spellcheck="false" title="Click to edit text (changes will be printed but not saved)">
+<div class="container">
+<div class="printer-preview-content" contenteditable="true" spellcheck="false" title="Click to edit text (changes will be printed but not saved)">
     <div class="t33363">
         <div class="row">
             <div id="header-row">
@@ -801,80 +735,4 @@ $theme_color = "#303336";
             </div>
         </div>
     </div>
-
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-
-<script type="text/javascript">
-
-
-
-
-
-
-function syncShopiFy_order(){
-   /* $.ajax(
-          {
-              type : 'POST',
-              url : '<?php echo base_url(); ?>Home/getOrders',
-              data : {shop:shop,access_token:access_token,toalOrders:'<?php echo $orderCount; ?>'},
-              dataType:"json",
-            beforeSend: function(data)
-            {
-              //  $('.loading').fadeIn();
-            },
-           success: function(data)
-           {  if(data['msg']!=''){
-               $('#msgs').html(data['msg']);
-              }
-        
-           },async: false
-        
-      });*/
-
-}
-
-function print_orders($orderId){
- // var url='<?php echo base_url(); ?>Home/getPrintorder'
-//var win = window.open(url, '_blank');
- // win.focus();
- $('#modal-media').show();
-}
-	
- $(document).ready(function() {
-
-
- 
-
-
-table = $('#employee-grid').DataTable({
-                "lengthMenu": [[20, 50], [20, 50]],
-               // dom: 'lBfrtip',
-                "serverSide": true, //Feature control DataTables' server-side processing mode.
-                //"order": [], //Initial no order.
-                // Load data for the table's content from an Ajax source
-                "ajax": {
-                        "url": '<?php echo base_url(); ?>Home/getOrders',
-                        "type": "POST"
-                },
-                "columnDefs": [
-    { "name": "orderNumber",   "targets": 0 },
-    { "name": "name",  "targets": 1 },
-    { "name": "zipcode", "targets": 2 },
-    { "name": "total",  "targets": 3 },
-    { "name": "tags",    "targets": 4 },
-    { "name": "fulfillments",   "targets": 5 },
-    { "name": "fraud",  "targets": 6 },
-    { "name": "paid", "targets": 7 },
-    { "name": "tracking_number",  "targets": 8 },
-     { "name": "order_created",  "targets": 8 }
-  ]
-
-        });
-
-    } );
- 
-</script>
+  </div>

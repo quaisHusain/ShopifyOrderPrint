@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = "https://".$_SERVER['HTTP_HOST']."/2018/Rituraj/";
+$config['base_url'] = "https://".$_SERVER['HTTP_HOST']."/2018/Rituraj2/";
 
 /*
 |--------------------------------------------------------------------------
@@ -513,7 +513,7 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 // ------------------------------------------------------------------------
-$config['shopify_api_key'] = 'efd1b0edee7a0a764d46312410e0370c';
-$config['shopify_secret'] = 'd1feb79b82c2c73a7daadf24382f9ec7';
+$config['shopify_api_key'] = '9c2f0fe6b06d46a7698e5cc789e260e6';
+$config['shopify_secret'] = '910198436b046d83e1c910dd28f14aef';
 $config['redirect_url'] = $config['base_url'].'auth/auth_callBack';
 //Add domain name before the slash, same as you have specified while creating the app in shopify partners dashboard

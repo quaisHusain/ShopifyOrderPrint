@@ -125,9 +125,11 @@
 
            
             $this->load->library('Shopify' , $data1); 
-             $ordersCount = $this->shopify->call(['METHOD' => 'GET', 'URL' =>'/admin/orders/count.json?'],TRUE);
+            
+            $ordersCount = $this->shopify->call(['METHOD' => 'GET', 'URL' =>'/admin/orders/count.json'],TRUE);
+            //print_r($ordersCount);
+            //exit;
 
-          
              $data['orderCount']=$ordersCount->count;
              $this->load->load_admin('welcome',$data);
 
